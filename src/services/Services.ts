@@ -96,21 +96,7 @@ export interface Navigation {
 }
 
 declare const skedInjected: {
-  Services: Services
-  context?: {
-    referenceUID: string
-  }
-  params: { [paramName: string]: any }
-  profile: Profile
   credentials: Credentials
-  navigation: Navigation
-  routes: string[]
 }
 
-export const Services = skedInjected && skedInjected.Services
-export const context =  skedInjected &&skedInjected.context
-export const params =  skedInjected &&skedInjected.params
-export const profile =  skedInjected &&skedInjected.profile
-export const credentials =  skedInjected &&skedInjected.credentials
-export const navigation =  skedInjected &&skedInjected.navigation
-export const routes =  skedInjected &&skedInjected.routes
+export const credentials = skedInjected.credentials
